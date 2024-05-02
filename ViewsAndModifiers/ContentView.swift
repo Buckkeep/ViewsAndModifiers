@@ -7,43 +7,23 @@
 
 import SwiftUI
 
+struct CapsuleText: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .foregroundStyle(.white)
+            .background(.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/))
+    }
+}
+
 struct ContentView: View {
-    
-    let motto1 = Text("Draco dormiens")
-    let motto2 = Text("nunquam titillandus")
-    
-    var spells: some View {
-        VStack {
-            Text("Lumos")
-            Text("Obliviate")
-        }
-    }
-
-    var spells2: some View {
-        Group {
-            Text("Lumos")
-            Text("Obliviate")
-        }
-    }
-
-    @ViewBuilder var spells3: some View {
-        Text("Lumos")
-        Text("Obliviate")
-    }
-
     
     var body: some View {
         VStack {
-            motto1
-                .foregroundStyle(.red)
-            motto2
-                .foregroundStyle(.blue)
-            spells
-                .foregroundColor(.yellow)
-            spells2
-                .foregroundStyle(.cyan)
-            spells3
-                .foregroundStyle(.green)
+            CapsuleText(text: "First")
+            CapsuleText(text: "Second")
         }
 
     }
