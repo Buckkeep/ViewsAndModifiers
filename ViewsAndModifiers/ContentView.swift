@@ -13,14 +13,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(useRedText ? .green : .red)
-            Button("Hello, world!") {
-                useRedText.toggle()
-            }
-            .foregroundStyle(useRedText ? .red : .green)
+            Text("Gryffindor")
+                .font(.largeTitle)
+            Text("Hufflepuff")
+            Text("Ravenclaw")
+            Text("Slytherin")
+            
         }
+        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.blue)
     }
